@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>Vanilla Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-sm-6">
+                <input
+                  type="search"
+                  placeholder="Enter a City"
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-2">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary w-100"
+                />
+              </div>
+            </div>
+          </form>
+
+          <div class="overview">
+            <h1 id="city"></h1>
+            <ul>
+              <li id="date"></li>
+              <li id="description"></li>
+            </ul>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <img
+                id="icon"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                width="100px"
+                alt="alt"
+              />
+              <strong id="temp"></strong>
+              <span class="units">°C | <a href="# ">°F</a></span>
+            </div>
+            <div class="col-sm-5">
+              <ul>
+                <li>Humidity: <span id="humidity"></span> %</li>
+                <li>Wind: <span id="wind"></span> Km/H</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <small>
+        <a
+          href="https://github.com/Kellzbellz45/SCP-Vanilla-Weather-App/find/main"
+          target="_blank"
+          class="open-source"
+          >Open Sourced Code</a
+        >
+        by Kelly Faria
+      </small>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>
